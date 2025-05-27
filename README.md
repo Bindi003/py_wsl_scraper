@@ -1,4 +1,4 @@
-# py-wsl-scraper
+# py_wsl_scraper
 
 [![PyPI version](https://img.shields.io/pypi/v/py-wsl-scraper.svg)](https://pypi.org/project/py-wsl-scraper/)
 
@@ -6,7 +6,15 @@
   <img src="images/pywsl-banner.jpg" alt="py-wsl-scraper logo" width="300"/>
 </p>
 
-**pywsl** is a Python package for scraping Women's Super League (WSL) football data. It provides tools to retrieve league tables, fixtures, top scorers, squad market valuations, and venue attendances.
+**py_wsl_scraper** is a Python package for scraping Women's Super League (WSL) football data. It provides tools to retrieve league tables, fixtures, top scorers, squad market valuations, and venue attendances.
+
+## Why This Matters
+
+While there are several Python packages for scraping football data, most are focused exclusively on men's leagues. Access to structured, reliable data for women's football is still limited and fragmented.
+
+**py-wsl-scraper** helps fill this gap by targeting the [Women's Super League (WSL)](https://www.soccerdonna.de/) using Soccerdonna — a specialist data source affiliated with Transfermarkt that provides deeper coverage of the women’s game.
+
+This package supports researchers, analysts, and developers who want to build inclusive tools, run analysis, and advocate for visibility and representation in football data.
 
 ## Installation
 
