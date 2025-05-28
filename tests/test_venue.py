@@ -1,3 +1,4 @@
+# Tests to make sure get_venue_attendance() returns expected structure
 from pywsl import get_venue_attendance
 
 def test_get_venue_attendance_2024():

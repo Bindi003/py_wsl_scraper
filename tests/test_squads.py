@@ -1,3 +1,4 @@
+# Tests to make sure get_squad_valuations() returns expected structure
 from pywsl import get_squad_valuations
 
 def test_get_squad_valuations():

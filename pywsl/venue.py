@@ -7,30 +7,35 @@ def get_venue_attendance(season: str = "2024"):
     headers = {
         "User-Agent": "Mozilla/5.0"
     }
+    # Form data to specify the season
     data = {
         "saison_id": season
     }
 
     response = requests.post(url, data=data, headers=headers)
     soup = BeautifulSoup(response.text, "html.parser")
+    # Finding the attendance table
     table = soup.find("table", {"id": "spieler"})
 
     if not table:
-        print("⚠️ Could not find venue table.")
+        print("Could not find venue table.")
         return pd.DataFrame()
 
+    # Skipping the header row
     rows = table.find_all("tr")[1:]
     data = []
 
     for row in rows:
         cols = row.find_all("td")
         if len(cols) >= 8:
+            # Extracting stadium and club name, which are grouped in the second column
             club_info = cols[1].get_text(separator="|", strip=True).split("|")
             stadium = club_info[0]
             club = club_info[1]
 
         
             try:
+                # Appending attendance data
                 data.append({
                     "Club": club,
                     "Stadium": stadium,

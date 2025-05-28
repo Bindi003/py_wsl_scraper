@@ -9,18 +9,20 @@ def get_league_table():
     soup = BeautifulSoup(response.content, "html.parser")
 
     table = soup.find("table", class_="standard_tabelle")
-    rows = table.find_all("tr")[1:]  # skip header
+    rows = table.find_all("tr")[1:]  # skipping header
 
     data = []
     for row in rows:
         cols = [td.text.strip() for td in row.find_all("td")]
-        if len(cols) != 10:  # Only include rows with full data
+        if len(cols) != 10:  # skipping rows without full data
             continue
 
+        # fomats goal data
         goals = cols[7].split(":")
         goals_for = int(goals[0])
         goals_against = int(goals[1])
 
+        # appends data to team data list
         team_data = {
             "Position": cols[0],
             "Team": cols[2],

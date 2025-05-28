@@ -1,3 +1,4 @@
+# Tests to make sure get_top_Scorers() returns expected structure
 from pywsl import get_top_scorers
 
 def test_get_top_scorers_2024():
