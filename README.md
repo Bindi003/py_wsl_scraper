@@ -44,6 +44,7 @@ from pywsl import (
     get_top_scorers,
     get_squad_valuations,
     get_venue_attendance
+    display_table
 )
 
 # League table
@@ -61,6 +62,9 @@ squads_df = get_squad_valuations()
 # Venue attendance
 venues_df = get_venue_attendance("2024")
 
+# Display a DataFrame without index
+display_table(league_df)
+
 ```
 
 ## Modules 
@@ -70,6 +74,7 @@ venues_df = get_venue_attendance("2024")
 - `scorers.py` – Scrapes top goal scorers by season.
 - `squads.py` – Scrapes squad size, average age, and market values.
 - `venues.py` – Scrapes venue data including capacity and attendance.
+- `display.py` – Includes utility function `display_table(df)` for printing DataFrames without the index.
 
 
 
@@ -79,6 +84,13 @@ venues_df = get_venue_attendance("2024")
 - ```beautifulsoup4```
 - ```selenium```
 - ```webdriver-manager```
+
+
+## Contributing
+
+We welcome contributions of all kinds! Whether it's fixing bugs, improving documentation, or adding new features, check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide to get started.
+
+Please note that all contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 
 ## License
