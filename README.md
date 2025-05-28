@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ```
 ## 📹 Video Walkthrough
 
-You can [watch the tutorial video here](examples/tutorial-vid.mp4) to follow along with the notebook.
+You can [![Watch the walkthrough](examples/tutorial-vide_preview.png)](examples/tutorial-vid.mp4) to follow along with the notebook.
 
 ## Usage
 
